@@ -1,0 +1,39 @@
+GET http://localhost:3000/api/libros HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/libros/2 HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/libros HTTP/1.1
+content-type: application/json
+
+{
+    "titulo": "Columbus",
+    "autor": "Lorena Martin",
+    "info": {
+        "editorial": "Oceano",
+        "paginas": "200",
+        "ediciones": [ "2000", "2005" ]
+    }
+}
+
+###
+
+PUT http://localhost:3000/api/libros/2 HTTP/1.1
+content-type: application/json
+
+{
+    "titulo": "El Sol Amarillo",
+    "autor": "Martin Vazquez",
+    "info": {
+        "editorial": "Marenostrum",
+        "paginas": "100",
+        "ediciones": [ "1980", "2005" ]
+    }
+}
+
+###
+
+DELETE http://localhost:3000/api/libros/1 HTTP/1.1
